@@ -22,12 +22,8 @@ namespace sedmiZadatak
             cart.AddItem(book);
 
             IVisitor visitor = new RentVisitor();
-            cart.setVisitor(visitor);
-            Console.WriteLine(cart.Accept(visitor));
-
-            
-            cart.setVisitor(new BuyVisitor());
-            Console.WriteLine(cart.Accept(visitor));
+            Console.WriteLine(cart.Accept(visitor));           
+            Console.WriteLine(cart.Accept(new BuyVisitor()));
         }
     }
 }

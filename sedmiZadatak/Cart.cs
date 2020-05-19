@@ -9,14 +9,9 @@ namespace sedmiZadatak
     class Cart
     {
         private List<IItem> items;
-        private IVisitor visitor;
         public Cart()
         {
             items = new List<IItem>();
-        }
-        public void setVisitor(IVisitor visitor)
-        {
-            this.visitor = visitor;
         }
         public void AddItem(IItem item)
         {
@@ -27,7 +22,7 @@ namespace sedmiZadatak
             items.Remove(item);
         }
         public double Accept(IVisitor visitor)
-        {
+        {   
             double price = 0;
             foreach(IItem item in items)
             {
