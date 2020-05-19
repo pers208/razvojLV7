@@ -26,7 +26,7 @@ namespace sedmiZadatak
         {
             items.Remove(item);
         }
-        public double Accept()
+        public double Accept(IVisitor visitor)
         {
             double price = 0;
             foreach(IItem item in items)
