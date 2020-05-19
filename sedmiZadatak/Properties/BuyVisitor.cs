@@ -24,5 +24,6 @@ namespace sedmiZadatak
         {
             return BookItem.Price*(1+BookTax);
         }
+        
     }
 }

@@ -52,7 +52,7 @@
     <Compile Include="Properties\IItem.cs" />
     <Compile Include="Properties\IVisitor.cs" />
     <Compile Include="Properties\RentVisitor.cs" />
-    <Compile Include="VHS.cs" />
+    <Compile Include="Properties\VHS.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

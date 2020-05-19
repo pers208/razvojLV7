@@ -8,8 +8,8 @@ namespace sedmiZadatak
 {
     class Cart
     {
-        List<IItem> items;
-        IVisitor visitor;
+        private List<IItem> items;
+        private IVisitor visitor;
         public Cart()
         {
             items = new List<IItem>();
@@ -30,8 +30,8 @@ namespace sedmiZadatak
         {
             double price = 0;
             foreach(IItem item in items)
-            {   
-                //price += visitor.Visit(item);
+            {
+                price += item.Accept(visitor);
             }
             return price;
         }
