@@ -16,12 +16,11 @@ namespace prviZadatak
             Random generator = new Random();
             double[] array = new double[10];
 
-            NumberSequence numberSequence = new NumberSequence(10);
             for (int i = 0; i < 10; i++)
             {
                 array[i] = generator.Next(1, 10);
-                numberSequence.InsertAt(i, array[i]);
             }
+            NumberSequence numberSequence = new NumberSequence(array);
             numberSequence.SetSortStrategy(bubbleSort);
             numberSequence.Sort();
             Console.WriteLine(numberSequence.ToString());

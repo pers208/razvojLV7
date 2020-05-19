@@ -10,11 +10,16 @@ namespace drugiZadatak
     {
         static void Main(string[] args)
         {
-            ISearchStrategy searchStrategy = new LinearSearch();
-            double[] array = { 1.74, 148, 7, 16, 4, -2, -3, 500, 9, 11 };
+            ISearchStrategy linearSearch = new LinearSearch();
+            Random generator = new Random();
+            double[] array = new double[10];
+            for (int i = 0; i < 10; i++)
+            {
+                array[i] = generator.Next(1, 10);
+            }
             NumberSequence numberSequence = new NumberSequence(array);
-            numberSequence.SetSearchStrategy(searchStrategy);
-            Console.WriteLine(numberSequence.Search(-2));
+            numberSequence.SetSearchStrategy(linearSearch);
+            Console.WriteLine(numberSequence.Search(1));
             Console.WriteLine(numberSequence.Search(-277));
         }
     }

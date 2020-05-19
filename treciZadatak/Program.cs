@@ -15,7 +15,11 @@ namespace treciZadatak
             SimpleSystemDataProvider simpleSystemDataProvider = new SystemDataProvider();
             simpleSystemDataProvider.Attach(consoleLogger);
             simpleSystemDataProvider.Attach(fileLogger);
-            simpleSystemDataProvider.Notify();
+            while (true)
+            {
+                simpleSystemDataProvider.Notify();
+                System.Threading.Thread.Sleep(1000);
+            }
         }
     }
 }
